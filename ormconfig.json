@@ -1,0 +1,15 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "!Q2w3e4r5t6y",
+  "database": "ukeess_test",
+  "entities": [
+    "dist/**/*.entity{.ts,.js}"
+  ],
+  "synchronize": false,
+  "migrations": [
+    "dist/migration/**/*.ts"
+  ]
+}

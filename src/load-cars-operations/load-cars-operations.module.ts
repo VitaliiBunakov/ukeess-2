@@ -5,11 +5,8 @@ import { CarsModule } from '../cars/cars.module';
 import { OperationsModule } from '../operations/operations.module';
 
 @Module({
-  imports:[
-    OperationsModule,
-    CarsModule
-  ],
+  imports: [OperationsModule, CarsModule],
   controllers: [LoadCarsOperationsController],
-  providers: [LoadCarsOperationsService]
+  providers: [LoadCarsOperationsService],
 })
 export class LoadCarsOperationsModule {}
