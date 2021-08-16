@@ -11,7 +11,7 @@ export class LoadCarsOperationsService {
     readonly operationsService: OperationsService,
   ) {}
 
-  loadCars(file): string {
+  mainHandler(file): string {
     streamifier
       .createReadStream(file.buffer)
       .pipe(parse({ delimiter: ';', columns: true }))
@@ -40,6 +40,9 @@ export class LoadCarsOperationsService {
         } else {
           await this.operationsService.createOperation(tmpObj);
         }
+      })
+      .catch((e) => {
+        console.log(e);
       });
 
     return `File in progress`;

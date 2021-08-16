@@ -11,12 +11,6 @@ export class OperationsService {
   ) {}
 
   async createOperation(operation) {
-    let res;
-    try {
-      res = await this.operationRepository.save(operation);
-    } catch (err) {
-      console.log(err);
-    }
-    return res;
+    return await this.operationRepository.save(operation);
   }
 }

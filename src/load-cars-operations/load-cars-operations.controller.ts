@@ -16,6 +16,6 @@ export class LoadCarsOperationsController {
   @Post()
   @UseInterceptors(FileInterceptor('file'))
   loadCars(@UploadedFile() file: Express.Multer.File): any {
-    return this.loadCarsOperationService.loadCars(file);
+    return this.loadCarsOperationService.mainHandler(file);
   }
 }
